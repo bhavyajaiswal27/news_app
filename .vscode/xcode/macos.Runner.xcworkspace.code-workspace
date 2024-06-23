@@ -1,0 +1,44 @@
+{
+    "folders": [
+        {
+            "name": "news_app/macos\\Runner.xcworkspace",
+            "path": "../.."
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\web": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\test": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\README.md": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\pubspec.yaml": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\pubspec.lock": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\news_app.iml": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\linux": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\lib": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\ios": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\images": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\android": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\analysis_options.yaml": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.metadata": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.idea": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.dart_tool": true
+        },
+        "search.exclude": {
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\web": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\test": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\README.md": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\pubspec.yaml": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\pubspec.lock": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\news_app.iml": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\linux": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\lib": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\ios": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\images": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\android": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\analysis_options.yaml": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.metadata": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.idea": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.dart_tool": true
+        }
+    }
+}
