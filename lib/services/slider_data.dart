@@ -1,0 +1,26 @@
+import 'package:news_app/models/carousel_slider.dart';
+
+List <SliderModel> getslider() {
+  List<SliderModel> slider=[];
+
+  SliderModel categoryModel = SliderModel();
+  
+  categoryModel.image = "images/business.jpeg";
+  categoryModel.name = "ABCDEFx ";
+  slider.add(categoryModel);
+  categoryModel = new SliderModel();
+  categoryModel.image = "images/entertainment.jpg";
+  categoryModel.name = "Entertainment";
+  slider.add(categoryModel);
+  categoryModel = new SliderModel();
+  categoryModel.image = "images/health.jpg";
+  categoryModel.name = "Health";
+  slider.add(categoryModel);
+  categoryModel = new SliderModel();
+  categoryModel.image = "images/science.jpg";
+  categoryModel.name = "Science";
+  slider.add(categoryModel);
+  categoryModel = new SliderModel();
+
+  return slider;
+}
