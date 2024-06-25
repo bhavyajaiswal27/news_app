@@ -9,15 +9,15 @@ List <SliderModel> getslider() {
   categoryModel.name = "ABCDEFx ";
   slider.add(categoryModel);
   categoryModel = new SliderModel();
-  categoryModel.image = "images/entertainment.jpg";
+  categoryModel.image = "images/entertainment.jpeg";
   categoryModel.name = "Entertainment";
   slider.add(categoryModel);
   categoryModel = new SliderModel();
-  categoryModel.image = "images/health.jpg";
+  categoryModel.image = "images/health.jpeg";
   categoryModel.name = "Health";
   slider.add(categoryModel);
   categoryModel = new SliderModel();
-  categoryModel.image = "images/science.jpg";
+  categoryModel.image = "images/science.jpeg";
   categoryModel.name = "Science";
   slider.add(categoryModel);
   categoryModel = new SliderModel();
