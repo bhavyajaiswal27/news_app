@@ -21,7 +21,7 @@ List <CategoryModel> getCategories() {
   categoryModel = new CategoryModel();
 
   categoryModel.CategoryName = "Health";
-  categoryModel.image = "health/general.jpeg";
+  categoryModel.image = "images/health.jpeg";
   category.add(categoryModel);
   categoryModel = new CategoryModel();
 
