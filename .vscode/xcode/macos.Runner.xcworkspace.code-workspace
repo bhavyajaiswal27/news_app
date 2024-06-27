@@ -23,6 +23,8 @@
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\analysis_options.yaml": true,
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.metadata": true,
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.idea": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.flutter-plugins-dependencies": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.flutter-plugins": true,
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.dart_tool": true
         },
         "search.exclude": {
@@ -42,6 +44,8 @@
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\analysis_options.yaml": true,
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.metadata": true,
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.idea": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.flutter-plugins-dependencies": true,
+            "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.flutter-plugins": true,
             "..\\..\\Users\\jaisw\\AppData\\Local\\Programs\\Microsoft VS Code\\kaam\\news_app\\.dart_tool": true
         }
     }
