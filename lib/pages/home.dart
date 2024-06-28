@@ -1,10 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/models/artical_model.dart';
 import 'package:news_app/models/carousel_slider.dart';
 import 'package:news_app/models/category_model.dart';
 import 'package:news_app/services/data.dart';
+import 'package:news_app/services/news.dart';
 import 'package:news_app/services/slider_data.dart';
-
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Home extends StatefulWidget {
@@ -17,13 +19,41 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<CategoryModel> categories = [];
   List<SliderModel> sliders = [];
+  List<ArticalModel> article = [];
+  bool _isloading = true;
 
   @override
   void initState() {
     categories = getCategories();
+    
     sliders = getslider();
+    getNews();
     super.initState();
   }
+
+  getNews() async {
+  print("getNews called");
+  try {
+    News newsClass = News();
+    await newsClass.getNews();
+    print("News fetched, updating articles list");
+    article = newsClass.news;
+
+    // Debug prints
+    print("Articles fetched: ${article.length}");
+    for (var art in article) {
+      print("Title: ${art.title}, Description: ${art.description}");
+    }
+
+    setState(() {
+      _isloading = false;
+    });
+  } catch (e, stackTrace) {
+    print("Error in getNews: $e");
+    print("Stack trace: $stackTrace");
+  }
+}
+
 
   int activeIndex = 0;
 
@@ -80,11 +110,9 @@ class _HomeState extends State<Home> {
                   Text("View all",
                       style: TextStyle(color: Colors.blue, fontSize: 16)),
                 ],
-                
               ),
-              
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10),
             if (sliders.isNotEmpty)
               Column(
                 children: [
@@ -131,157 +159,21 @@ class _HomeState extends State<Home> {
               ),
             ),
             const SizedBox(height: 10),
-            
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              
-              child: Material(
-                elevation: 3,
-                borderRadius: BorderRadius.circular(10),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    
-                    children: [
-                      SizedBox(
-                        height: 150,
-                        width: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset("images/business.jpeg",
-                          fit: BoxFit.cover,
-                          height: 120,
-                          width: 120,)),
-                      ),
-                      const SizedBox(width: 10),
-                      const Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "kavya ubhe oihnefvb iebvjqp ipdh beihk eb i jf",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              "ubhe oihnefvb iebvjqp ipdh beihk eb i jf",
-                              style: TextStyle(
-                                color: Colors.black26,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+            if (_isloading)
+              const Center(child: CircularProgressIndicator())
+            else
+              ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: article.length,
+                itemBuilder: (context, index) {
+                  return BlogTitle(
+                    description: article[index].description!,
+                    imageUrl: article[index].urlToImage!,
+                    title: article[index].title!,
+                  );
+                },
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              
-              child: Material(
-                elevation: 3,
-                borderRadius: BorderRadius.circular(10),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    
-                    children: [
-                      SizedBox(
-                        height: 150,
-                        width: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset("images/business.jpeg",
-                          fit: BoxFit.cover,
-                          height: 120,
-                          width: 120,)),
-                      ),
-                      const SizedBox(width: 10),
-                      const Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "kavya ubhe oihnefvb iebvjqp ipdh beihk eb i jf",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              "ubhe oihnefvb iebvjqp ipdh beihk eb i jf",
-                              style: TextStyle(
-                                color: Colors.black26,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              
-              child: Material(
-                elevation: 3,
-                borderRadius: BorderRadius.circular(10),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    
-                    children: [
-                      SizedBox(
-                        height: 150,
-                        width: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset("images/business.jpeg",
-                          fit: BoxFit.cover,
-                          height: 120,
-                          width: 120,)),
-                      ),
-                      const SizedBox(width: 10),
-                      const Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "kavya ubhe oihnefvb iebvjqp ipdh beihk eb i jf",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              "ubhe oihnefvb iebvjqp ipdh beihk eb i jf",
-                              style: TextStyle(
-                                color: Colors.black26,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
@@ -365,6 +257,80 @@ class CategoryTitle extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class BlogTitle extends StatelessWidget {
+  final String imageUrl, title, description;
+
+  const BlogTitle({
+    super.key,
+    required this.description,
+    required this.imageUrl,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 10),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Material(
+            elevation: 3,
+            borderRadius: BorderRadius.circular(10),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 150,
+                    width: 150,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: CachedNetworkImage(
+                        imageUrl: imageUrl,
+                        fit: BoxFit.cover,
+                        height: 120,
+                        width: 120,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          maxLines: 2,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          description,
+                          maxLines: 3,
+                          style: const TextStyle(
+                            color: Colors.black26,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

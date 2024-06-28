@@ -6,5 +6,7 @@ class ArticalModel {
   String? content;
   String? url;
 
-  ArticalModel({this.author, this.content, this.description, this.title, this.url, this.urlToImage})
+  ArticalModel({this.author, this.content, this.description, this.title, this.url, this.urlToImage}) {
+    
+  }
 }
